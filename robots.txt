@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.smtechnoservices.in/sitemap.xml
+Sitemap: https://www.smtechnoservice.online/sitemap.xml
