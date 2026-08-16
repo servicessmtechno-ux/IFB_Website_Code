@@ -56,7 +56,7 @@ function toggleFaq(button) {
     var form = document.getElementById('contactForm');
     if (!form) return;
 
-    var WA_NUMBER = '919908473572';
+    var WA_NUMBER = '919897746579';
 
     form.addEventListener('submit', function(e) {
         e.preventDefault();
