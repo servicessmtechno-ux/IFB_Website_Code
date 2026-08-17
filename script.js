@@ -37,6 +37,45 @@ function toggleFaq(button) {
     button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
 }
 
+// Lazy-load Google Map iframe (keeps map URL out of the HTML so Googlebot does not crawl it)
+(function() {
+    var container = document.getElementById('mapContainer');
+    if (!container) return;
+
+    var iframeSrc = 'https://maps.google.com/maps?q=17.41817918700127,78.44962456333997&z=19&output=embed';
+
+    function loadMap() {
+        if (container.dataset.loaded) return;
+        container.dataset.loaded = '1';
+        container.innerHTML = '';
+        var iframe = document.createElement('iframe');
+        iframe.src = iframeSrc;
+        iframe.width = '100%';
+        iframe.height = '250';
+        iframe.style.border = '0';
+        iframe.style.borderRadius = '0';
+        iframe.allowFullscreen = true;
+        iframe.loading = 'lazy';
+        iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+        iframe.title = 'IFB washing machine repair service area map in Hyderabad';
+        container.appendChild(iframe);
+    }
+
+    if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    loadMap();
+                    observer.disconnect();
+                }
+            });
+        }, { rootMargin: '200px' });
+        observer.observe(container);
+    } else {
+        loadMap();
+    }
+})();
+
 // Services Show More Toggle
 (function() {
     var grid = document.getElementById('servicesGrid');
