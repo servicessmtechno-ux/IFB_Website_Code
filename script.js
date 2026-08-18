@@ -20,8 +20,16 @@ document.querySelectorAll('.menu a').forEach(function(link) {
 document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        var target = document.querySelector(this.getAttribute('href'));
+        var hash = this.getAttribute('href');
+        var target = document.querySelector(hash);
         if (target) {
+            if (hash.length > 1) {
+                if (history.pushState) {
+                    history.pushState(null, '', hash);
+                } else {
+                    window.location.hash = hash;
+                }
+            }
             var headerHeight = 60;
             var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
             window.scrollTo({ top: targetPosition, behavior: 'smooth' });

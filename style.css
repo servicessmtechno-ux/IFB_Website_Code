@@ -821,8 +821,10 @@ img {
 }
 
 /* Scroll offset for sticky header */
-section[class*="content-block"],
-.content-block {
+.hero-banner,
+.services-band,
+.content-block,
+.contact-section {
     scroll-margin-top: 70px;
 }
 
