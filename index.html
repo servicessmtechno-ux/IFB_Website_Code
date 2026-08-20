@@ -12,6 +12,22 @@
         gtag('config', 'AW-18400184484');
     </script>
 
+    <!-- Event snippet for Contact conversion page -->
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof (url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-18400184484/v-2SCLGf3eQcEKSR8sVE',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IFB Washing Machine Repair in Hyderabad | Doorstep Service</title>
@@ -302,7 +318,9 @@
                     <h3>Need a Technician Today?</h3>
                     <p>Call or WhatsApp us now for doorstep IFB washing machine repair in Hyderabad.</p>
                     <div class="intro-cta-buttons">
-                        <a href="tel:8977465791" class="btn btn-primary"><i class="fas fa-phone-alt"></i> 8977465791</a>
+                        <a href="tel:8977465791" class="btn btn-primary"
+                            onclick="return gtag_report_conversion('tel:8977465791');"><i class="fas fa-phone-alt"></i>
+                            8977465791</a>
                         <a href="https://wa.me/918977465791" target="_blank" rel="noopener noreferrer"
                             class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
                     </div>
@@ -521,7 +539,9 @@
                             code keeps returning after basic checks, the machine may have a sensor, PCB or motor fault
                             that needs professional attention.</div>
                         <div class="error-code-item"><strong>How to book service:</strong> call <a
-                                href="tel:8977465791">8977465791</a> or WhatsApp us with the error code and model
+                                href="tel:8977465791"
+                                onclick="return gtag_report_conversion('tel:8977465791');">8977465791</a> or WhatsApp us
+                            with the error code and model
                             number. Our technician will diagnose and explain the issue before any repair work.</div>
                     </div>
                     <p class="problems-extra"><em>We do not publish the full meaning of every IFB error code because
@@ -560,7 +580,9 @@
                             </ul>
                             <div class="machine-cta">
                                 <a href="#contact" class="btn btn-primary">Book a Repair</a>
-                                <a href="tel:8977465791" class="btn btn-call"><i class="fas fa-phone-alt"></i> Call
+                                <a href="tel:8977465791" class="btn btn-call"
+                                    onclick="return gtag_report_conversion('tel:8977465791');"><i
+                                        class="fas fa-phone-alt"></i> Call
                                     Now</a>
                             </div>
                         </div>
@@ -587,7 +609,9 @@
                             </ul>
                             <div class="machine-cta">
                                 <a href="#contact" class="btn btn-primary">Book a Repair</a>
-                                <a href="tel:8977465791" class="btn btn-call"><i class="fas fa-phone-alt"></i> Call
+                                <a href="tel:8977465791" class="btn btn-call"
+                                    onclick="return gtag_report_conversion('tel:8977465791');"><i
+                                        class="fas fa-phone-alt"></i> Call
                                     Now</a>
                             </div>
                         </div>
@@ -613,7 +637,9 @@
                             </ul>
                             <div class="machine-cta">
                                 <a href="#contact" class="btn btn-primary">Book a Repair</a>
-                                <a href="tel:8977465791" class="btn btn-call"><i class="fas fa-phone-alt"></i> Call
+                                <a href="tel:8977465791" class="btn btn-call"
+                                    onclick="return gtag_report_conversion('tel:8977465791');"><i
+                                        class="fas fa-phone-alt"></i> Call
                                     Now</a>
                             </div>
                         </div>
@@ -684,7 +710,8 @@
                 <h2 class="text-center">IFB Washing Machine Repair Service in Hyderabad</h2>
                 <p class="text-center areas-intro">Doorstep IFB washing machine repair and service across Hyderabad and nearby
                     areas. Our technician visits your location and repairs your machine. Call <a
-                        href="tel:8977465791">8977465791</a> or WhatsApp us.</p>
+                        href="tel:8977465791"
+                        onclick="return gtag_report_conversion('tel:8977465791');">8977465791</a> or WhatsApp us.</p>
 
                 <div class="areas-panel">
                     <div class="areas-grid">
@@ -723,7 +750,8 @@
                     </div>
                 </div>
 
-                <p class="section-cta">Don't see your area? Call <a href="tel:8977465791">8977465791</a> — we cover
+                <p class="section-cta">Don't see your area? Call <a href="tel:8977465791"
+                        onclick="return gtag_report_conversion('tel:8977465791');">8977465791</a> — we cover
                     all of Hyderabad &amp; Telangana.</p>
             </section>
 
@@ -852,7 +880,8 @@
                             <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
                             <div class="contact-info">
                                 <h4>Call Us</h4>
-                                <p><a href="tel:8977465791">8977465791</a></p>
+                                <p><a href="tel:8977465791"
+                                        onclick="return gtag_report_conversion('tel:8977465791');">8977465791</a></p>
                             </div>
                         </div>
 
@@ -957,7 +986,8 @@
     </footer>
 
     <!-- Floating Buttons -->
-    <a href="tel:8977465791" class="float-icon float-call" aria-label="Call IFB Washing Machine Repair Service Center">
+    <a href="tel:8977465791" class="float-icon float-call" aria-label="Call IFB Washing Machine Repair Service Center"
+        onclick="return gtag_report_conversion('tel:8977465791');">
         <i class="fas fa-phone"></i>
     </a>
     <a href="https://wa.me/918977465791" class="float-icon float-whatsapp" target="_blank"
